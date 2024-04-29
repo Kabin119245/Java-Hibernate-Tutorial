@@ -12,6 +12,12 @@ public class Main {
     public static void main(String[] args) {
 
 
+        fetchData();
+       // getData();
+    }
+
+    public static void getData() {
+
         Alien kabin = new Alien();
         kabin.setAid(106);
         kabin.setAname("Laxmi");
@@ -34,5 +40,30 @@ public class Main {
 
 
 
+
     }
+    public static void fetchData( ) {
+
+        Alien kabin = new Alien();
+
+        Configuration conf = new Configuration().configure().addAnnotatedClass(Alien.class);
+
+        ServiceRegistry sr = new StandardServiceRegistryBuilder().applySettings(conf.getProperties()).build();
+
+        SessionFactory sf = conf.buildSessionFactory(sr);
+
+        Session session = sf.openSession();
+
+        Transaction tx = session.beginTransaction();
+
+        kabin = (Alien)session.get(Alien.class,105 );
+        //we should typecast to ALien type because get method returns thr Object type
+
+        tx.commit();
+
+        System.out.println(kabin);
+
+
+    }
+
 }
