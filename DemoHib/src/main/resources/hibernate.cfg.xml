@@ -10,7 +10,7 @@
     <property name="connection.password">2078</property> <!-- DB Password -->
      <!-- DB Dialect -->
 
-    <property name="hbm2ddl.auto">update</property>
+    <property name="hbm2ddl.auto">create</property>
     <property name="show_sql">true</property>
   </session-factory>
 </hibernate-configuration>

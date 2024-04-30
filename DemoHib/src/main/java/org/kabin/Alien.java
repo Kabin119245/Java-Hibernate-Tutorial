@@ -9,14 +9,14 @@ public class Alien {   //POJO
 
     @Id
     private int aid;
-    private String aname;
+    private AlienName aname;
     private String color;
 
-    public String getAname() {
+    public AlienName getAname() {
         return aname;
     }
 
-    public void setAname(String aname) {
+    public void setAname(AlienName aname) {
         this.aname = aname;
     }
 
@@ -34,5 +34,14 @@ public class Alien {   //POJO
 
     public void setAid(int aid) {
         this.aid = aid;
+    }
+
+    @Override
+    public String toString() {
+        return "Alien{" +
+                "aid=" + aid +
+                ", aname='" + aname + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
