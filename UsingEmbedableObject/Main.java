@@ -12,25 +12,17 @@ public class Main {
     public static void main(String[] args) {
 
 
-<<<<<<< HEAD
         //fetchData();
        getData();
-=======
-        fetchData();
-       // getData();
->>>>>>> 71f66c8185890e37861e8060167f4e1d393ddaad
     }
 
     public static void getData() {
 
-<<<<<<< HEAD
         AlienName an = new AlienName();
         an.setFname("Kabin");
         an.setMname("Raj");
         an.setLname("Giri");
 
-=======
->>>>>>> 71f66c8185890e37861e8060167f4e1d393ddaad
         Alien kabin = new Alien();
         kabin.setAid(101);
         kabin.setAname(an); //we need to pass object of AlienName type
@@ -81,8 +73,4 @@ public class Main {
 
     }
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 71f66c8185890e37861e8060167f4e1d393ddaad
